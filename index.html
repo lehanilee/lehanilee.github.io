@@ -185,6 +185,102 @@
       width: 38px;
     }
 
+    /* -- PROJECTS -- */
+    .projects-section {
+      width: 100%;
+      margin-top: 92px;
+      padding-bottom: 72px;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards 0.85s;
+    }
+
+    .projects-section h2 {
+      font-family: 'Fahkwang', serif;
+      font-size: clamp(30px, 4vw, 46px);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 30px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      width: min(100%, 920px);
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      border: 1px solid var(--light-gray);
+      border-radius: 8px;
+      background-color: #fff;
+      overflow: hidden;
+      text-decoration: none;
+      color: var(--black);
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .project-card:hover,
+    .project-card:focus-within {
+      border-color: rgba(231, 27, 92, 0.45);
+      transform: translateY(-3px);
+    }
+
+    .project-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background-color: var(--light-gray);
+    }
+
+    .project-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 22px;
+    }
+
+    .project-content h3 {
+      font-family: 'Fahkwang', serif;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .project-content p {
+      flex: 1;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.65;
+      color: var(--gray);
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      margin-top: 22px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--black);
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 3px;
+      transition: color 0.2s ease;
+    }
+
+    .project-link:hover,
+    .project-link:focus-visible {
+      color: var(--pink);
+    }
+
     /* ── TICKER ── */
     .ticker-wrap {
       width: 100%;
@@ -304,7 +400,7 @@
       }
 
       main {
-        max-width: 720px;
+        max-width: 920px;
         padding-left: 0;
         padding-right: 0;
         margin-left: 10%;
@@ -319,6 +415,9 @@
       footer { padding: 20px 24px; }
       .ticker-wrap { padding: 14px 0; }
       .ticker-group { gap: 24px; }
+      .projects-section { margin-top: 72px; padding-bottom: 56px; }
+      .projects-grid { grid-template-columns: 1fr; gap: 22px; }
+      .project-content { padding: 20px; }
     }
   </style>
 </head>
@@ -352,6 +451,48 @@
       <span>Contact me</span>
       <span class="contact-arrow" aria-hidden="true"></span>
     </a>
+
+    <section class="projects-section" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <img src="assets/projects/data-catalog.svg" alt="Interface thumbnail for the Enterprise Data Catalog project">
+          <div class="project-content">
+            <h3>Enterprise Data Catalog</h3>
+            <p>A searchable data discovery experience that helps teams understand ownership, context, and trust signals before they use a dataset.</p>
+            <a class="project-link" href="projects/enterprise-data-catalog.html">View project</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/projects/insights-dashboard.svg" alt="Dashboard thumbnail for the Insights Workspace project">
+          <div class="project-content">
+            <h3>Insights Workspace</h3>
+            <p>A dashboard concept for tracking research findings, surfacing patterns, and turning customer signals into product decisions.</p>
+            <a class="project-link" href="projects/insights-workspace.html">View project</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/projects/design-system.svg" alt="Component library thumbnail for the Design System Refresh project">
+          <div class="project-content">
+            <h3>Design System Refresh</h3>
+            <p>A component and guidance update focused on clearer interaction states, tighter documentation, and smoother handoff with engineers.</p>
+            <a class="project-link" href="projects/design-system-refresh.html">View project</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/projects/onboarding-flow.svg" alt="Journey flow thumbnail for the Guided Onboarding project">
+          <div class="project-content">
+            <h3>Guided Onboarding</h3>
+            <p>A step-by-step onboarding flow that reduces setup uncertainty and helps new users reach their first successful task faster.</p>
+            <a class="project-link" href="projects/guided-onboarding.html">View project</a>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
 
   <!-- TICKER -->

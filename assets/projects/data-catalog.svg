@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise Data Catalog thumbnail</title>
+  <desc id="desc">A product interface layout with search, filters, and dataset rows.</desc>
+  <rect width="800" height="600" fill="#FAFAF8"/>
+  <rect x="68" y="70" width="664" height="460" rx="18" fill="#FFFFFF" stroke="#EBEBEA" stroke-width="3"/>
+  <rect x="108" y="112" width="584" height="54" rx="27" fill="#F5F5F2"/>
+  <circle cx="136" cy="139" r="10" fill="#E71B5C"/>
+  <rect x="160" y="132" width="198" height="14" rx="7" fill="#B6B6B2"/>
+  <rect x="108" y="204" width="132" height="28" rx="14" fill="#111010"/>
+  <rect x="260" y="204" width="112" height="28" rx="14" fill="#F4CAD8"/>
+  <rect x="392" y="204" width="90" height="28" rx="14" fill="#C9D9CE"/>
+  <rect x="108" y="276" width="584" height="1" fill="#EBEBEA"/>
+  <rect x="108" y="314" width="584" height="1" fill="#EBEBEA"/>
+  <rect x="108" y="352" width="584" height="1" fill="#EBEBEA"/>
+  <rect x="108" y="390" width="584" height="1" fill="#EBEBEA"/>
+  <rect x="108" y="428" width="584" height="1" fill="#EBEBEA"/>
+  <rect x="126" y="251" width="122" height="10" rx="5" fill="#111010"/>
+  <rect x="126" y="289" width="192" height="10" rx="5" fill="#7A7A78"/>
+  <rect x="126" y="327" width="164" height="10" rx="5" fill="#7A7A78"/>
+  <rect x="126" y="365" width="206" height="10" rx="5" fill="#7A7A78"/>
+  <rect x="126" y="403" width="148" height="10" rx="5" fill="#7A7A78"/>
+  <rect x="522" y="248" width="116" height="16" rx="8" fill="#F4CAD8"/>
+  <rect x="522" y="286" width="86" height="16" rx="8" fill="#C9D9CE"/>
+  <rect x="522" y="324" width="132" height="16" rx="8" fill="#F0DF9F"/>
+  <rect x="522" y="362" width="96" height="16" rx="8" fill="#D8D8D4"/>
+  <rect x="522" y="400" width="110" height="16" rx="8" fill="#F4CAD8"/>
+</svg>

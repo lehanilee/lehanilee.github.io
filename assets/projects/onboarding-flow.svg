@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Guided Onboarding thumbnail</title>
+  <desc id="desc">A journey flow with connected product setup steps.</desc>
+  <rect width="800" height="600" fill="#FAFAF8"/>
+  <rect x="72" y="82" width="656" height="436" rx="18" fill="#FFFFFF" stroke="#EBEBEA" stroke-width="3"/>
+  <path d="M186 302H614" fill="none" stroke="#EBEBEA" stroke-width="12" stroke-linecap="round"/>
+  <rect x="118" y="204" width="150" height="196" rx="14" fill="#F5F5F2" stroke="#D8D8D4" stroke-width="2"/>
+  <rect x="325" y="156" width="150" height="196" rx="14" fill="#F4CAD8"/>
+  <rect x="532" y="204" width="150" height="196" rx="14" fill="#C9D9CE"/>
+  <circle cx="193" cy="302" r="34" fill="#111010"/>
+  <circle cx="400" cy="254" r="34" fill="#E71B5C"/>
+  <circle cx="607" cy="302" r="34" fill="#111010"/>
+  <rect x="150" y="354" width="86" height="10" rx="5" fill="#7A7A78"/>
+  <rect x="357" y="306" width="86" height="10" rx="5" fill="#7A7A78"/>
+  <rect x="564" y="354" width="86" height="10" rx="5" fill="#7A7A78"/>
+  <path d="M284 286L306 302L284 318" fill="none" stroke="#111010" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M491 286L513 302L491 318" fill="none" stroke="#111010" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

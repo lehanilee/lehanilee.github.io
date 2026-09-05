@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Design System Refresh thumbnail</title>
+  <desc id="desc">A component library board with tokens, controls, and UI pieces.</desc>
+  <rect width="800" height="600" fill="#FAFAF8"/>
+  <rect x="70" y="76" width="660" height="448" rx="18" fill="#FFFFFF" stroke="#EBEBEA" stroke-width="3"/>
+  <rect x="112" y="124" width="130" height="86" rx="10" fill="#111010"/>
+  <rect x="270" y="124" width="130" height="86" rx="10" fill="#E71B5C"/>
+  <rect x="428" y="124" width="130" height="86" rx="10" fill="#C9D9CE"/>
+  <rect x="586" y="124" width="86" height="86" rx="10" fill="#F0DF9F"/>
+  <rect x="112" y="268" width="256" height="54" rx="27" fill="#111010"/>
+  <rect x="398" y="268" width="180" height="54" rx="27" fill="#F4CAD8"/>
+  <rect x="112" y="370" width="130" height="76" rx="8" fill="#F5F5F2" stroke="#D8D8D4" stroke-width="2"/>
+  <rect x="270" y="370" width="130" height="76" rx="8" fill="#F5F5F2" stroke="#D8D8D4" stroke-width="2"/>
+  <rect x="428" y="370" width="130" height="76" rx="8" fill="#F5F5F2" stroke="#D8D8D4" stroke-width="2"/>
+  <rect x="586" y="370" width="86" height="76" rx="8" fill="#F5F5F2" stroke="#D8D8D4" stroke-width="2"/>
+  <rect x="132" y="398" width="70" height="9" rx="4.5" fill="#7A7A78"/>
+  <rect x="290" y="398" width="74" height="9" rx="4.5" fill="#7A7A78"/>
+  <rect x="448" y="398" width="62" height="9" rx="4.5" fill="#7A7A78"/>
+  <rect x="606" y="398" width="44" height="9" rx="4.5" fill="#7A7A78"/>
+</svg>
