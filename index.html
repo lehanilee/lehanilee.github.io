@@ -300,9 +300,6 @@
     .projects-section.is-unlocked .projects-content { display: block; }
 
     .projects-content h2 {
-      position: sticky;
-      top: var(--nav-offset);
-      z-index: 1;
     }
 
     .projects-access {
@@ -316,9 +313,6 @@
     }
 
     .projects-access h2 {
-      position: sticky;
-      top: var(--nav-offset);
-      z-index: 1;
       text-align: left;
     }
 
@@ -348,6 +342,18 @@
       width: 100%;
       padding-top: 92px;
       padding-bottom: 72px;
+      position: relative;
+    }
+
+    .fun-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 100vw;
+      height: 1px;
+      background: var(--black);
+      transform: translateX(-50%);
     }
 
     .fun-section h2 {
@@ -356,9 +362,6 @@
       font-size: 30px;
       font-weight: 300;
       line-height: 1.1;
-      position: sticky;
-      top: var(--nav-offset);
-      z-index: 1;
     }
 
     .fun-grid {
