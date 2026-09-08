@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enterprise Data Catalog - Jenny Kyong Ah Lee</title>
+  <title>Redesigning the Customer Journey Building Experience - Jenny Kyong Ah Lee</title>
   <link rel="icon" type="image/png" href="../favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,16 +11,93 @@
   <link rel="stylesheet" href="../projects/project.css">
 </head>
 <body>
+  <nav class="site-nav">
+    <a class="site-logo" href="../index.html">
+      <img src="../favicon.png" alt="Jenny Kyong Ah Lee">
+      <span class="site-logo-text"><span>Jenny</span><span>Kyong Ah</span><span>Lee</span></span>
+    </a>
+    <ul>
+      <li><a href="https://linkedin.com/in/kyongahlee" target="_blank">linkedin</a></li>
+      <li><a href="../Lee_Resume_2026.pdf" target="_blank">résumé</a></li>
+    </ul>
+  </nav>
   <main class="project-page">
-    <a class="back-link" href="../index.html#projects-title">Back to projects</a>
-    <img class="hero-image" src="../assets/projects/data-catalog.svg" alt="Interface thumbnail for the Enterprise Data Catalog project">
-    <p class="eyebrow">Product Design / Data Experience</p>
-    <h1>Enterprise Data Catalog</h1>
-    <p class="lead">A searchable data discovery experience that helps teams understand ownership, context, and trust signals before they use a dataset.</p>
+    <a class="back-link" href="../index.html#projects-title"><span class="back-arrow" aria-hidden="true"></span><span>Back to projects</span></a>
+    <img class="hero-image" src="../assets/case-studies/journey/63238b430dae6297b5620dfb_pagetitle.jpg" alt="Campaign journey builder interface">
+    <p class="eyebrow">Simon Data / UX, UI, User Research, User Testing</p>
+    <h1>Redesigning the customer journey building experience</h1>
+    <p class="lead">Simon Data’s multi-step campaign feature, Journeys, had strong adoption but growing limitations were beginning to frustrate users and contribute to churn.</p>
     <section>
-      <h2>Focus</h2>
-      <p>Clarifying how people find, evaluate, and confidently reuse enterprise data across complex internal systems.</p>
+      <h2>Product ask</h2>
+      <p>Design an industry-standard multi-step campaign builder that supports flexible, complex cross-channel marketing across SMS, email, and push.</p>
     </section>
+    <section>
+      <h2>Existing product</h2>
+      <p>A quick audit and previous user feedback identified two core challenges: rigid validation made it impossible to save work in progress, and the graph hid the campaign logic people needed to understand at a glance.</p>
+      <figure class="case-figure">
+        <img src="../assets/case-studies/journey/632a068987ee2764cd9b5bb7_unnamed.png" alt="Previous campaign builder graph view">
+        <figcaption>Old campaign-builder graph view.</figcaption>
+      </figure>
+      <figure class="case-figure">
+        <img src="../assets/case-studies/journey/632a06e0dd3270343e2b0e60_scroll.gif" alt="Previous campaign configuration flow">
+        <figcaption>Configuring a graph node previously pulled users into a separate page.</figcaption>
+      </figure>
+    </section>
+    <section>
+      <h2>Research</h2>
+      <p>Interviews with five marketers showed that multi-step campaigns were difficult to set up, users feared messaging the wrong audience, and teams relied on external documents to plan and review campaign logic.</p>
+    </section>
+    <section>
+      <h2>User journey and design goal</h2>
+      <p>Research was mapped to each step of the marketer journey, making it clear where the product could remove friction. The guiding goal was to create a builder that mirrors how people construct a multi-step campaign in their minds and empowers them rather than hinders them.</p>
+      <figure class="case-figure">
+        <img src="../assets/case-studies/journey/632a1af401516f9120e59daf_userjourney.jpeg" alt="User journey map for campaign creation">
+        <figcaption>A typical campaign-building journey with research insights and pain points.</figcaption>
+      </figure>
+    </section>
+    <section>
+      <h2>Solutions</h2>
+      <p>The new builder breaks campaign logic into visual nodes that users can drag and arrange like a mind map. A side drawer keeps configuration and reporting details in context, while review mode and versioning make it safer to share and iterate on in-progress campaigns.</p>
+      <figure class="case-figure">
+        <img src="../assets/case-studies/journey/632a1f69c3cae471c80481a3_at creation states.png" alt="Campaign journey step types">
+        <figcaption>Different step types users can combine to build a journey.</figcaption>
+      </figure>
+      <figure class="case-figure">
+        <img src="../assets/case-studies/journey/632a1f959b1139225473981a_move_step_UI.gif" alt="Drag and drop campaign journey interaction">
+        <figcaption>Drag and drop lets users organize the campaign graph freely.</figcaption>
+      </figure>
+      <h3>Maintaining context</h3>
+      <p>Settings, metrics, and configurations are surfaced in a side drawer, so users can work on an individual campaign node without losing their place in the journey.</p>
+      <figure class="case-figure">
+        <img src="../assets/case-studies/journey/632a23b76e9c15bfc0b87433_sidedrawer.png" alt="Campaign side drawer with settings and reporting">
+      </figure>
+      <h3>Review before launch and safe iteration</h3>
+      <p>Review mode lets teams share work without changing configurations. Versioning lets teams refine a launched campaign, then route qualifying customers to the newly launched version.</p>
+      <figure class="case-figure">
+        <img src="../assets/case-studies/journey/632a24dcab2fe83e31dac358_Journey_ViewMode.gif" alt="Campaign review mode">
+      </figure>
+      <figure class="case-figure">
+        <img src="../assets/case-studies/journey/632a24673f871f34270bb00e_Screen Shot 2022-09-20 at 4.36.22 PM.png" alt="Campaign version management">
+      </figure>
+    </section>
+    <section>
+      <h2>User testing</h2>
+      <p>Five select users tested the prototype. The sessions revealed that people accustomed to the previous scroll-based controls initially struggled with infinite-canvas navigation, and that language needed to align more closely with Simon Data’s single-campaign product.</p>
+      <figure class="case-figure">
+        <img src="../assets/case-studies/journey/632a1de3e9200a7486b2c5d5_UT.png" alt="User testing script excerpt">
+      </figure>
+    </section>
+    <section>
+      <h2>Looking forward</h2>
+      <p>Beta feedback revealed that migration from the original Journeys experience remained a barrier to adoption, informing future exploration of auto-migration tools.</p>
+      <figure class="case-figure">
+        <img src="../assets/case-studies/journey/632a1e179a18b5b98e869c2d_feedback.png" alt="Beta feedback tracking sheet">
+        <figcaption>Feedback was documented with Customer Success partners throughout the beta.</figcaption>
+      </figure>
+    </section>
+    <nav class="project-pagination" aria-label="Project navigation"></nav>
   </main>
+  <footer class="site-footer"><div class="site-footer-content"><img src="../favicon.png" alt=""><span class="site-footer-copy">© 2026 Jenny Kyong Ah Lee. All rights reserved.</span></div></footer>
+  <script src="project-navigation.js"></script>
 </body>
 </html>

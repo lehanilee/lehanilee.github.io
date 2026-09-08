@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guided Onboarding - Jenny Kyong Ah Lee</title>
+  <title>Online Ordering Menus - Jenny Kyong Ah Lee</title>
   <link rel="icon" type="image/png" href="../favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,16 +11,69 @@
   <link rel="stylesheet" href="../projects/project.css">
 </head>
 <body>
+  <nav class="site-nav">
+    <a class="site-logo" href="../index.html">
+      <img src="../favicon.png" alt="Jenny Kyong Ah Lee">
+      <span class="site-logo-text"><span>Jenny</span><span>Kyong Ah</span><span>Lee</span></span>
+    </a>
+    <ul>
+      <li><a href="https://linkedin.com/in/kyongahlee" target="_blank">linkedin</a></li>
+      <li><a href="../Lee_Resume_2026.pdf" target="_blank">résumé</a></li>
+    </ul>
+  </nav>
   <main class="project-page">
-    <a class="back-link" href="../index.html#projects-title">Back to projects</a>
-    <img class="hero-image" src="../assets/projects/onboarding-flow.svg" alt="Journey flow thumbnail for the Guided Onboarding project">
-    <p class="eyebrow">UX Design / Activation</p>
-    <h1>Guided Onboarding</h1>
-    <p class="lead">A step-by-step onboarding flow that reduces setup uncertainty and helps new users reach their first successful task faster.</p>
+    <a class="back-link" href="../index.html#projects-title"><span class="back-arrow" aria-hidden="true"></span><span>Back to projects</span></a>
+    <img class="hero-image" src="../assets/case-studies/online-ordering/6320b0ecfdd46b8cb0c48b48_1.jpg" alt="Online ordering menu management interface">
+    <p class="eyebrow">BentoBox / UX, UI, User Research</p>
+    <h1>Online Ordering Menus</h1>
+    <p class="lead">BentoBox needed an online-ordering feature for its restaurant CMS that could help teams quickly create and associate locations, menus, and menu items.</p>
     <section>
-      <h2>Focus</h2>
-      <p>Reducing friction in early product moments through clearer sequencing, progressive guidance, and more reassuring system feedback.</p>
+      <h2>Design problem</h2>
+      <p>Restaurants needed to manage related locations, menus, and menu items quickly while still understanding how that content would appear on their online-ordering sites.</p>
+      <h3>Company goals</h3>
+      <p>Hospitality was central to BentoBox: the product needed to feel tailored to restaurants while respecting the specifics of their industry and workflows.</p>
     </section>
+    <section>
+      <h2>Internal audit</h2>
+      <p>An audit surfaced the trade-off between familiar nested hierarchy and flexible flat-level associations. Interviews also revealed that Customer Success teams, not only restaurant operators, were core users of the CMS.</p>
+      <h3>Nesting hierarchy</h3>
+      <p>In BentoBox’s Restaurant Menu Builder, items were nested under menu sections and sections under menus. This top-down association was familiar and made site output easy to visualize, but it forced people to create content in a fixed order.</p>
+      <figure class="case-figure"><img src="../assets/case-studies/online-ordering/6320b135a280879aca85bded_2.png" alt="Nested menu hierarchy"></figure>
+      <h3>Flat-level association</h3>
+      <p>Other CMS products used tags to group independently created items and categories. This allowed flexible creation, but made it harder to visualize the public-facing structure.</p>
+      <figure class="case-figure"><img src="../assets/case-studies/online-ordering/6320b1bea48fa37d3691613e_3.gif" alt="Flat-level menu association"></figure>
+    </section>
+    <section>
+      <h2>User behaviors and competitors</h2>
+      <p>Preliminary interviews with restaurants using competitors such as ChowNow, Grubhub, and Seamless showed that operators often contacted Customer Service to manage content, even when they had access to the necessary tools.</p>
+      <blockquote>A common theme was that restaurants reached out to Customer Service to manage their content despite having access to do it themselves.</blockquote>
+    </section>
+    <section>
+      <h2>Flow explorations</h2>
+      <p>The first concept used a master menu shared by default across locations, with branching for local variations. Though useful for multi-location restaurants, it was too complex for single-location businesses.</p>
+      <figure class="case-figure"><img src="../assets/case-studies/online-ordering/6320b1cd356330bfec8f70fd_4.jpeg" alt="Master menu flow exploration"></figure>
+      <p>A revised flow combined hierarchy and association: items could be assigned to menus, and menus to locations, while preserving reuse across both.</p>
+      <figure class="case-figure"><img src="../assets/case-studies/online-ordering/6320b1e071212c51b243c0d0_5.jpeg" alt="Revised online ordering flow"></figure>
+    </section>
+    <section>
+      <h2>Redefining the user</h2>
+      <p>Recruitment uncovered that Customer Success and Onboarding Managers were often the primary CMS users. Newer team members preferred a top-down approach; more experienced members created items first, then linked them to menus and locations. Neither group immediately discovered that both workflows were possible.</p>
+    </section>
+    <section>
+      <h2>Final design</h2>
+      <p>The experience kept familiar menu-builder associations while encouraging an item-first workflow. This supported both newer users who built top-down and experienced teams who created items first and assigned them later.</p>
+      <figure class="case-figure"><img src="../assets/case-studies/online-ordering/6320b25e1efdf164704add2d_6.png" alt="Final online ordering menu design"></figure>
+      <figure class="case-figure"><img src="../assets/case-studies/online-ordering/6320b280a28087b4c985c748_7.png" alt="Online ordering menu configuration"></figure>
+      <figure class="case-figure"><img src="../assets/case-studies/online-ordering/6320b29a583fdd35f392f456_8.png" alt="Online ordering menu content management"></figure>
+      <figure class="case-figure"><img src="../assets/case-studies/online-ordering/6320b2a4c947a9dc38576154_9.png" alt="Online ordering menu detail"></figure>
+    </section>
+    <section>
+      <h2>Retrospective</h2>
+      <p>The Online Ordering beta launched to qualifying customers in August 2019. The familiar pattern was received favorably, with continued measurement focused on feature usage and Customer Success requests.</p>
+    </section>
+    <nav class="project-pagination" aria-label="Project navigation"></nav>
   </main>
+  <footer class="site-footer"><div class="site-footer-content"><img src="../favicon.png" alt=""><span class="site-footer-copy">© 2026 Jenny Kyong Ah Lee. All rights reserved.</span></div></footer>
+  <script src="project-navigation.js"></script>
 </body>
 </html>

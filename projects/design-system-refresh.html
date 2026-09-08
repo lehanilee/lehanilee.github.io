@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Design System Refresh - Jenny Kyong Ah Lee</title>
+  <title>Defining Error States - Jenny Kyong Ah Lee</title>
   <link rel="icon" type="image/png" href="../favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,16 +11,72 @@
   <link rel="stylesheet" href="../projects/project.css">
 </head>
 <body>
+  <nav class="site-nav">
+    <a class="site-logo" href="../index.html">
+      <img src="../favicon.png" alt="Jenny Kyong Ah Lee">
+      <span class="site-logo-text"><span>Jenny</span><span>Kyong Ah</span><span>Lee</span></span>
+    </a>
+    <ul>
+      <li><a href="https://linkedin.com/in/kyongahlee" target="_blank">linkedin</a></li>
+      <li><a href="../Lee_Resume_2026.pdf" target="_blank">résumé</a></li>
+    </ul>
+  </nav>
   <main class="project-page">
-    <a class="back-link" href="../index.html#projects-title">Back to projects</a>
-    <img class="hero-image" src="../assets/projects/design-system.svg" alt="Component library thumbnail for the Design System Refresh project">
-    <p class="eyebrow">Systems / UI Foundations</p>
-    <h1>Design System Refresh</h1>
-    <p class="lead">A component and guidance update focused on clearer interaction states, tighter documentation, and smoother handoff with engineers.</p>
+    <a class="back-link" href="../index.html#projects-title"><span class="back-arrow" aria-hidden="true"></span><span>Back to projects</span></a>
+    <img class="hero-image" src="../assets/case-studies/localsync/63238af173f904f3cd5a29d6_5d7927af19506f0f7b6a15e7_localsync.jpg" alt="LocalSync interface">
+    <p class="eyebrow">BentoBox / UX, UI</p>
+    <h1>Defining Error States</h1>
+    <p class="lead">LocalSync, a feature for syncing restaurant menus and location details, had low adoption and was overwhelming users with ambiguous error messages.</p>
     <section>
-      <h2>Focus</h2>
-      <p>Improving consistency at scale through reusable patterns, clearer usage guidance, and more resilient component states.</p>
+      <h2>Design problem</h2>
+      <p>Users were seeing errors in both the side navigation and the LocalSync page, creating confusion and a high volume of Customer Service contact. Technical integration errors were difficult to trace and often hard for users to act on.</p>
+      <h3>Known constraints</h3>
+      <p>Integration partners could return many API errors that were vague and technical, while a lack of field validation made errors difficult to reproduce.</p>
     </section>
+    <section>
+      <h2>Audit and goals</h2>
+      <p>A feature teardown and a customer usage capture revealed that people reached a page full of errors before taking any action. The former system categorized every state other than successful sync as an error.</p>
+      <figure class="case-figure">
+        <img src="../assets/case-studies/localsync/631f7bfc0fb5a7e5f82a073c_audit.jpeg" alt="LocalSync audit">
+      </figure>
+      <figure class="case-figure">
+        <img src="../assets/case-studies/localsync/631f7c16fccd6a18c96b40dd_audit2.png" alt="LocalSync audit detail">
+      </figure>
+      <h3>Goals</h3>
+      <p>Differentiate true errors from ordinary statuses, make urgency clear, give people actionable next steps, and reduce fatigue from repeated, unintelligible alerts.</p>
+    </section>
+    <section>
+      <h2>New statuses</h2>
+      <p>The former catch-all “Sync Error” state was split into sync error, pending sync, and no integrations. Alerts distinguish warnings from failures, guide people to the relevant action, and reserve the side-navigation alert for genuine sync errors.</p>
+      <figure class="case-figure">
+        <img src="../assets/case-studies/localsync/631f817b808cb111b0ae9711_3.png" alt="New LocalSync statuses">
+      </figure>
+      <h3>Warning versus error</h3>
+      <p>Top-banner alerts use yellow for conditions that might impede sync and red for conditions that have already impeded it.</p>
+      <figure class="case-figure">
+        <img src="../assets/case-studies/localsync/631f84c06f778457348ca41d_4.jpg" alt="LocalSync warning and error states">
+      </figure>
+    </section>
+    <section>
+      <h2>Guided messaging and flow</h2>
+      <p>Banner copy was made more descriptive and actionable. A location without integrations opens directly to the connect tab, while hover and click details help people understand a status without cluttering the main interface.</p>
+      <figure class="case-figure"><img src="../assets/case-studies/localsync/631f82456431846a5332ce87_6.png" alt="Guided LocalSync messaging"></figure>
+      <figure class="case-figure"><img src="../assets/case-studies/localsync/631f82b561827216d8217519_7.png" alt="Actionable LocalSync detail"></figure>
+      <figure class="case-figure"><img src="../assets/case-studies/localsync/631f82e4870e24632ef316f6_8.png" alt="LocalSync interaction detail"></figure>
+      <figure class="case-figure"><img src="../assets/case-studies/localsync/631f82fc870e2467daf31740_9.png" alt="LocalSync status interaction"></figure>
+    </section>
+    <section>
+      <h2>Reduce occurrence of errors</h2>
+      <p>The side-navigation alert icon was redefined to appear only for locations with genuine sync errors; pending sync and no integrations no longer trigger it.</p>
+      <figure class="case-figure"><img src="../assets/case-studies/localsync/631f832d0155f5e9cf630eea_10.png" alt="Refined LocalSync navigation alert"></figure>
+    </section>
+    <section>
+      <h2>Looking forward</h2>
+      <p>The update made the experience clearer, while future work focused on better validation before data reaches integrations and continued monitoring of the most common errors.</p>
+    </section>
+    <nav class="project-pagination" aria-label="Project navigation"></nav>
   </main>
+  <footer class="site-footer"><div class="site-footer-content"><img src="../favicon.png" alt=""><span class="site-footer-copy">© 2026 Jenny Kyong Ah Lee. All rights reserved.</span></div></footer>
+  <script src="project-navigation.js"></script>
 </body>
 </html>

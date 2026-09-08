@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scanning Inventory - Jenny Kyong Ah Lee</title>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="site-logo" href="../index.html">
+      <img src="../favicon.png" alt="Jenny Kyong Ah Lee">
+      <span class="site-logo-text"><span>Jenny</span><span>Kyong Ah</span><span>Lee</span></span>
+    </a>
+    <ul>
+      <li><a href="https://linkedin.com/in/kyongahlee" target="_blank">linkedin</a></li>
+      <li><a href="../Lee_Resume_2026.pdf" target="_blank">résumé</a></li>
+    </ul>
+  </nav>
+
+  <main class="project-page scanning-inventory-page">
+    <a class="back-link" href="../index.html#projects-title"><span class="back-arrow" aria-hidden="true"></span><span>Back to projects</span></a>
+    <img class="hero-image" src="../assets/projects/scanning-inventory/image14.png" alt="Produce distributors visiting a warehouse during field research">
+    <p class="eyebrow">Silo / Product Design, UX, User Research</p>
+    <h1>Scanning inventory</h1>
+    <p class="lead">A barcode-scanning workflow that helps produce distributors keep warehouse inventory accurate as goods move out the door.</p>
+
+    <section class="project-overview">
+      <div>
+        <h2>Product goal</h2>
+        <p>Produce distributors needed a faster, more reliable way to match warehouse inventory with the records kept in the office. The goal was to reduce tracking errors and make it easier to verify inventory while products moved through the warehouse.</p>
+      </div>
+      <div>
+        <h2>Team and scope</h2>
+        <p>I led product design alongside one product manager and two engineers from August 2023 through July 2024.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Research in the warehouse</h2>
+      <p>Scanning was the most requested feature from both existing customers and prospects. To validate the request, the team visited ten distributors in McAllen, Texas and followed their workflows from the shipping office to the warehouse floor.</p>
+      <figure class="case-figure case-figure--field-research">
+        <img src="../assets/projects/scanning-inventory/image14.png" alt="Warehouse staff and distributors during field research">
+        <figcaption>Field research with produce distributors in McAllen, Texas.</figcaption>
+      </figure>
+      <p>Paper remained central to the process, and teams did not always trust the system to reflect what was physically loaded onto a truck. Staff needed to verify each product and quantity quickly while the truck waited, then report the change to the shipping office without adding another manual step.</p>
+    </section>
+
+    <section>
+      <h2>Workflow direction</h2>
+      <p>I mapped the flow across the warehouse and shipping office, then worked with product to define phases for the rollout. The first release focused on scanning in the shipping office, where it could update inventory with less engineering complexity. Future phases could move scanning closer to picking and selling workflows.</p>
+      <figure class="case-figure">
+        <img src="../assets/projects/scanning-inventory/image1.png" alt="Inventory scanning workflow across the shipping office and warehouse">
+        <figcaption>The phased inventory-scanning workflow identified opportunities inside and outside the product.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Designing the scan flow</h2>
+      <p>Design exploration focused on where scanning begins, how to introduce the workflow in context, how to group product and ID information, and how to make success and error states clear during a time-sensitive task.</p>
+      <figure class="case-figure">
+        <img src="../assets/projects/scanning-inventory/image2.png" alt="Existing order screen with an entry point to scan and assign lots">
+        <figcaption>The entry point appears within the existing order workflow.</figcaption>
+      </figure>
+      <figure class="case-figure">
+        <img src="../assets/projects/scanning-inventory/image6.png" alt="Empty scanning state that guides a user to begin assigning lots">
+        <figcaption>The empty state makes the next action clear before scanning begins.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Feedback in context</h2>
+      <p>Once a barcode is scanned, the workflow confirms the matched lot and shows the assigned quantity alongside the remaining order items. This keeps staff oriented to the order while providing immediate confirmation that inventory has updated.</p>
+      <figure class="case-figure">
+        <img src="../assets/projects/scanning-inventory/image10.png" alt="Scan-to-lot order showing a success message and assigned quantity">
+        <figcaption>Success feedback confirms the scanned lot and keeps the order context visible.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Outcome</h2>
+      <p>The scan-to-lot workflow launched to all customers in Q3 2024. Two existing customers adopted it within the first month. The work also renewed sales conversations with distributors in McAllen, an important produce-software market.</p>
+      <blockquote>“This works for me. Looks simple.”</blockquote>
+    </section>
+
+    <nav class="project-pagination" aria-label="Project navigation"></nav>
+  </main>
+
+  <footer class="site-footer"><div class="site-footer-content"><img src="../favicon.png" alt=""><span class="site-footer-copy">© 2026 Jenny Kyong Ah Lee. All rights reserved.</span></div></footer>
+  <script src="project-navigation.js"></script>
+</body>
+</html>
