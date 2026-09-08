@@ -146,12 +146,42 @@
       align-items: center;
       min-height: 100svh;
       padding-top: 106px;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
     }
 
     .intro-content {
       width: 100%;
       padding: 64px 48px 72px;
       max-width: 920px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .intro-logo-blob {
+      position: absolute;
+      right: -16vw;
+      bottom: 2vh;
+      width: clamp(560px, 78vw, 1100px);
+      aspect-ratio: 76 / 50;
+      opacity: 0.12;
+      pointer-events: none;
+      transform-style: preserve-3d;
+      --intro-blob-parallax: 0px;
+      animation: blobDrift 22s ease-in-out infinite;
+    }
+
+    .intro-logo-blob img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      filter: url(#intro-blob-filter);
+      transform: translateZ(12px);
+      -webkit-mask-image: radial-gradient(circle at 1px 1px, #000 1px, transparent 1.35px);
+      -webkit-mask-size: 5px 5px;
+      mask-image: radial-gradient(circle at 1px 1px, #000 1px, transparent 1.35px);
+      mask-size: 5px 5px;
     }
 
     h1 {
@@ -316,7 +346,6 @@
 
     .fun-section {
       width: 100%;
-      min-height: 100svh;
       padding-top: 92px;
       padding-bottom: 72px;
     }
@@ -613,6 +642,13 @@
       to   { opacity: 1; }
     }
 
+    @keyframes blobDrift {
+      0%, 100% { transform: translate3d(0, var(--intro-blob-parallax), 0) perspective(900px) rotateX(5deg) rotateY(-8deg) rotateZ(-3deg) scale(0.98, 1.02); }
+      24% { transform: translate3d(0, var(--intro-blob-parallax), 0) perspective(900px) rotateX(-6deg) rotateY(8deg) rotateZ(3deg) scale(1.04, 0.96); }
+      53% { transform: translate3d(0, var(--intro-blob-parallax), 0) perspective(900px) rotateX(8deg) rotateY(-4deg) rotateZ(-5deg) scale(0.96, 1.04); }
+      77% { transform: translate3d(0, var(--intro-blob-parallax), 0) perspective(900px) rotateX(-3deg) rotateY(-10deg) rotateZ(4deg) scale(1.03, 0.97); }
+    }
+
     @keyframes tickerScroll {
       from { transform: translateX(0); }
       to   { transform: translateX(-50%); }
@@ -691,6 +727,10 @@
       .fun-grid { grid-template-columns: 1fr; gap: 22px; }
       .project-content { padding: 20px; }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      .intro-logo-blob { animation: none; }
+    }
   </style>
 </head>
 <body>
@@ -713,6 +753,17 @@
 
   <!-- INTRODUCTION -->
   <header class="intro-section">
+    <svg width="0" height="0" aria-hidden="true" focusable="false">
+      <filter id="intro-blob-filter" x="-20%" y="-20%" width="140%" height="140%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="2" seed="7" result="noise">
+          <animate attributeName="baseFrequency" dur="16s" values="0.012 0.02;0.018 0.015;0.01 0.022;0.012 0.02" repeatCount="indefinite" />
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="26" xChannelSelector="R" yChannelSelector="G">
+          <animate attributeName="scale" dur="14s" values="18;28;20;18" repeatCount="indefinite" />
+        </feDisplacementMap>
+      </filter>
+    </svg>
+    <div class="intro-logo-blob" aria-hidden="true"><img src="Logosvg.svg" alt=""></div>
     <div class="intro-content">
     <h1>Hi - I'm <em>Jenny</em>.</h1>
 
@@ -844,6 +895,7 @@
   <script>
     const nav = document.querySelector('nav');
     const intro = document.querySelector('.intro-section');
+    const introBlob = document.querySelector('.intro-logo-blob');
 
     const updateNavBorder = () => {
       nav.classList.toggle(
@@ -855,6 +907,14 @@
     window.addEventListener('scroll', updateNavBorder, { passive: true });
     window.addEventListener('resize', updateNavBorder);
     updateNavBorder();
+
+    const updateIntroBlobParallax = () => {
+      const offset = Math.min(window.scrollY * 0.18, 160);
+      introBlob.style.setProperty('--intro-blob-parallax', `${offset}px`);
+    };
+
+    window.addEventListener('scroll', updateIntroBlobParallax, { passive: true });
+    updateIntroBlobParallax();
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
